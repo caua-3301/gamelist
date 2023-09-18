@@ -42,12 +42,15 @@ function emptyBanco() {
     return false;
 }
 
-//Criando um novo id com base no tamanho da meu item "banco", nunca se repetirá (possível problema com delete)
+//Criando um novo id com base no ultimo id da lista, adicionando mais um no valor máximo dela
 function newId() {
-    if (!emptyBanco){
+    if (emptyBanco()){
         return 0;
     }
-    return getBanco().length + 1;
+
+    const keysBanco = Object.keys(getBanco());
+    return Number(keysBanco[keysBanco.length - 1]) + 1;
+    
 }
 
 //Carregando os dados existente que estão no LocalStorage
