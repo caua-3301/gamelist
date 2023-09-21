@@ -1,21 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site que visa ajudar o suário a organizar sua lista de games, destacando os favoritos">
-    <meta name="keywords" content="games, lista favoritos, jogos">
+    <meta name="keywords" content="list, game, gamelist, desafio">
+    <meta name="description" content="Página que possibilita ao usuário armazenar uma lista com seus jogos favoritos">
+    <meta name="author" content="Alexandre">
     <meta name="author" content="Cauã Pires Soares">
-    <meta name="author" content="">
-    <meta name="author" content="">
-    <meta name="author" content="">
-    <link rel="stylesheet" href="./styles/estilo.css">
-    <title>Game list</title>
-    
+    <meta name="author" content="Camila">
+    <meta name="author" content="Luiz Henrique">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
 </head>
+
 <body>
 
-    
-    <script src=" "></script>
+    <h1><strong>LOOPIS</strong> GAME LIST</h1>
+    <div>
+        <div class="formulario">
+            <h2>Cadastro</h2>
+            <form>
+                <p class="form-area">
+                    <label for="nome" class="radio-container"> Nome </label><br>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome do game" required>
+                </p>
+                <p class="form-area">
+                    <label for="descricao">Descrição </label><br>
+
+                    <textarea name="descricao" id="descricao" cols="30" rows="10"
+                        placeholder="Digite uma breve descrição sobre o jogo..." required></textarea>
+
+                </p>
+                <p>Marcar como favorito?</p>
+                <p class="form-area">
+                    <input type="radio" name="marcar" id="sim" value="sim">
+                    <label for="sim">Sim</label>
+                    <input type="radio" name="marcar" id="nao" value="nao">
+                    <label for="nao">Não</label>
+                </p>
+                <p><input id="salvar" type="submit" value="Salvar"></p>
+            </form>
+        </div>
+
+        <div class="formulario">
+            <h2>Lista</h2>
+            <ul id="lista-jogos">
+                <li class="item-jogo">
+                    <img src="/img/joystick-svgrepo-com 1.png" alt="Imagem de um joystick" id="joy-image">
+
+                    <div id="info-game">
+                        <p id="saida-nome-jogo">Terraria</p>
+
+                        <p id="saida-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nesciunt
+                            molestiae nam saepe architecto officiis delectus quod, obcaecati mollitia ea porro est.
+                        </p>
+                    </div>
+
+                    <span class="material-symbols-outlined trash">
+                        delete
+                    </span>
+
+                    <span class="material-symbols-outlined star">
+                        star
+                    </span>
+
+
+                </li>
+
+
+                <li class="item-jogo-fav">
+                    <img src="/img/joystick-svgrepo-com 1.png" alt="Imagem de um joystick" id="joy-image">
+
+                    <div id="info-game">
+                        <p id="saida-nome-jogo">Terraria</p>
+
+                        <p id="saida-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nesciunt
+                            molestiae nam saepe architecto officiis delectus quod, obcaecati mollitia ea porro est.
+                        </p>
+                    </div>
+
+                    <span class="material-symbols-outlined trash">
+                        delete
+                    </span>
+
+                    <span class="material-symbols-outlined star-fav star">
+                        star
+                    </span>
+
+
+                </li>
+
+                
+            </ul>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
 </body>
+
 </html>

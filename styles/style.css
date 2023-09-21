@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+/*Ajustando o corpo da página*/
+body{
+    background: rgb(1, 3, 148) url(/img/Imagem-plano-de-fundo.png) no-repeat scroll center center;
+    background-size: cover;
+    width: 98vw;
+    height: 95vh;
+    margin: auto;  
+
+}
+
+/*Variaveis para textos*/
+:root{
+    --texto-geral: normal bold 1em sans-serif;
+    --texto-titulo: normal bolder 3em sans-serif;
+    --texto-subtitulo: normal bold 2.5em sans-serif;
+}
+
+/*Div que contem os campos dos jogos*/
+body > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+/*Título principal da página*/
+h1{
+    text-align: center;
+    font: var(--texto-titulo);
+    color: rgb(255, 255, 255);
+    background-color: #ffffff1b; /* Cor de fundo que você deseja espalhar */
+    box-shadow: 0 0 100px 95px #ffffff1b; /* Espalha a cor com uma sombra */
+}
+
+
+/*Detalhe do título da página*/
+strong{
+    color: rgb(255, 251, 98);
+}
+
+/*Card dos formulários*/
+.formulario{
+    background-color:rgb(255, 255, 255);
+    color: rgb(82, 97, 255);
+    font: var(--texto-geral);
+    border-radius: 20px;
+    width: 330px;
+    height: auto;
+    margin: 0 auto;
+    padding: 15px;
+    
+}
+
+/*Alterando o tamnaho do radio bottons*/
+input[type=radio]{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;  
+}
+
+/*Areas que possuem os formulário*/
+.form-area{
+    margin-top: 30px;
+}
+
+/*Detalhes dos subtitulos h2*/
+h2{
+    margin-top: 5px;
+    text-align: center;
+    font: var(--texto-subtitulo);
+}
+
+/*Input que recebe o nome do jogo*/
+#nome{
+    width:98%;
+    height: 30px;
+    border: 1px solid rgb(134, 133, 133);
+    border-radius: 5px;
+}
+
+/*Detalhes da descrição do game*/
+#descricao{
+    width: 98%;
+    resize: none;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid rgb(134, 133, 133);
+    font-family: sans-serif;
+
+}
+
+/*Botão para salvar o card*/
+#salvar{
+    background-color: rgb(65, 129, 255);
+    width: 150px;
+    color: rgb(255, 255, 255);
+    font: var(--texto-geral);
+    border-radius: 10px;
+    border-width: 0px;
+    padding: 8px 15px;
+    display: block;
+    transition: .5s;
+    cursor: pointer;
+    margin: 40px auto 0 auto;
+}
+
+#salvar:hover{
+    background-color: rgb(38, 95, 209);
+    transition: .5s;
+}
+
+/*Estilo da lista sem estar marcado como favorito*/
+
+/*Container da lsita*/
+#lista-jogos{
+    display: flex;
+    padding: 0;
+    overflow-y: scroll;
+    height: 400px;
+    row-gap: 15px;
+    flex-direction: column;
+}
+
+/*Itens da lista*/
+.item-jogo{
+    display: flex;
+    padding: 3px;
+    background-color: rgb(60, 78, 255);
+    border-radius: 10px;
+    height: 120px;
+    position: relative;
+}
+
+/*Pararafos filhos de uma div*/
+div > p{
+    color: rgb(255, 255, 255);
+    font: normal normal .74em sans-serif;
+    margin-top: 5px;
+    text-align: left;
+}
+
+/*Primeira tag paragrafo da div (nesse caso, será o nome do jogo)*/
+div > p:first-of-type{
+    font: normal bold 1.3em sans-serif;
+    height: 28px;
+    margin: 0 auto;
+}
+
+/*Cor dos icons (estrela e lixeira)*/
+li > span{
+    color:  rgb(255, 255, 255);
+}
+
+/*Div com as informações do jogo - nome e descrição*/
+#info-game{
+    margin-left: 55px;
+}
+
+/*Imagem do joystick*/
+#joy-image{
+    width: 57px;
+    height: 61px;
+    position: absolute;
+    transform: translateY(50%);
+}
+
+/*Detalhe no icon da estrela*/
+.star{
+    margin-left: 5px;
+}
+
+/*Estilo da lista sem estar marcado como favorito*/
+
+/*Mudando background (ajustar apenar cor depois)*/
+.item-jogo-fav{
+    display: flex;
+    padding: 5px;
+    background-color: rgb(20, 30, 126);
+    border-radius: 10px;
+    height: 120px;
+    position: relative;
+}
+
+/*Mudando cor da estrela*/
+.star-fav{
+    color: yellow;
+
+}
+
+
+/*AJUSTE NA RESPONSIVIDADE DA PÁGINA*/
+@media (max-width: 700px) {
+    body > div{
+        display: block;
+    }
+    body{
+        font-size: 18pt;
+    }
+}
