@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="list, game, gamelist, desafio">
     <meta name="description" content="Página que possibilita ao usuário armazenar uma lista com seus jogos favoritos">
-    <meta name="author" content="Alexandre">
+    <meta name="reply-to" content="kanto@gmail.com">
+    <meta name="author" content="Alexandre Gonçalves Evangelista">
     <meta name="author" content="Cauã Pires Soares">
-    <meta name="author" content="Camila">
-    <meta name="author" content="Luiz Henrique">
+    <meta name="author" content="Camila Santos Alves">
+    <meta name="author" content="José Henrique Araujo da Silva">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
+
+    <title>Game List</title>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
     <div>
         <div class="formulario">
             <h2>Cadastro</h2>
-            <form>
+            <form id="form" action="#">
                 <p class="form-area">
                     <label for="nome" class="radio-container"> Nome </label><br>
                     <input type="text" name="nome" id="nome" placeholder="Digite o nome do game" required>
@@ -37,9 +38,9 @@
                 </p>
                 <p>Marcar como favorito?</p>
                 <p class="form-area">
-                    <input type="radio" name="marcar" id="sim" value="sim">
+                    <input type="radio" name="marcar" id="radiosim" value="sim">
                     <label for="sim">Sim</label>
-                    <input type="radio" name="marcar" id="nao" value="nao">
+                    <input type="radio" name="marcar" id="radionao" value="nao" checked>
                     <label for="nao">Não</label>
                 </p>
                 <p><input id="salvar" type="submit" value="Salvar"></p>
@@ -48,57 +49,12 @@
 
         <div class="formulario">
             <h2>Lista</h2>
-            <ul id="lista-jogos">
-                <li class="item-jogo">
-                    <img src="/img/joystick-svgrepo-com 1.png" alt="Imagem de um joystick" id="joy-image">
+            <ul id="lista">
 
-                    <div id="info-game">
-                        <p id="saida-nome-jogo">Terraria</p>
-
-                        <p id="saida-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nesciunt
-                            molestiae nam saepe architecto officiis delectus quod, obcaecati mollitia ea porro est.
-                        </p>
-                    </div>
-
-                    <span class="material-symbols-outlined trash">
-                        delete
-                    </span>
-
-                    <span class="material-symbols-outlined star">
-                        star
-                    </span>
-
-
-                </li>
-
-
-                <li class="item-jogo-fav">
-                    <img src="/img/joystick-svgrepo-com 1.png" alt="Imagem de um joystick" id="joy-image">
-
-                    <div id="info-game">
-                        <p id="saida-nome-jogo">Terraria</p>
-
-                        <p id="saida-descricao">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nesciunt
-                            molestiae nam saepe architecto officiis delectus quod, obcaecati mollitia ea porro est.
-                        </p>
-                    </div>
-
-                    <span class="material-symbols-outlined trash">
-                        delete
-                    </span>
-
-                    <span class="material-symbols-outlined star-fav star">
-                        star
-                    </span>
-
-
-                </li>
-
-                
             </ul>
         </div>
     </div>
-    <script src="javascript.js"></script>
+    <script src="/javascript/script.js"></script>
 </body>
 
 </html>
