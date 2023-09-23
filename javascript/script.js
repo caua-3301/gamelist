@@ -3,7 +3,6 @@ let descricao = document.querySelector("#descricao");
 let radiosim = document.querySelector("#radiosim");
 let radionao = document.querySelector("#radionao");
 let lista = document.querySelector("#lista");
-
 let banco = JSON.parse(localStorage.getItem("banco"));
 
 //Verificando se o localStorage possui o item "banco", caso não possua, ele cria
@@ -17,14 +16,13 @@ if (banco === null) {
 let elementoHTML = (id, nome, descricao, favorito) => {
     return `
             <li class="item-jogo ${favorito ? 'item-jogo-fav' : 'item-jogo'}" ">
-                <img src="/img/joystick-svgrepo-com 1.png" alt="Imagem de um joystick" id="joy-image">
+                <img src="./img/joystick.png" alt="Imagem de um joystick" id="joy-image">
 
                 <div id="info-game">
                     <p id="saida-nome-jogo">${nome}</p>
                     
  
-                    <p id="saida-descricao">${descricao}>
-                    </p>
+                    <p id="saida-descricao">${descricao}</p>
                 </div>
 
                 <div id="container-icons">
