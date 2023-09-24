@@ -1,24 +1,24 @@
 @charset "UTF-8";
 
 /*Ajustando o corpo da página*/
-body{
+body {
     background: #010394 url("../img/Imagem-plano-de-fundo.png") no-repeat scroll center center;
     background-size: cover;
     width: 98vw;
     height: 95vh;
-    margin: auto;  
+    margin: auto;
 
 }
 
 /*Variaveis para textos*/
-:root{
+:root {
     --texto-geral: normal bold 1em sans-serif;
     --texto-titulo: normal bolder 3em sans-serif;
     --texto-subtitulo: normal bold 2.5em sans-serif;
 }
 
 /*Div que contem os campos dos jogos*/
-body > div{
+body>div {
     display: grid;
     grid-template-columns: 1fr 1fr;
     /*width: 80%;*/
@@ -28,23 +28,25 @@ body > div{
 }
 
 /*Título principal da página*/
-h1{
+h1 {
     text-align: center;
     font: var(--texto-titulo);
     color: rgb(255, 255, 255);
-    background-color: #ffffff1b; /* Cor de fundo que você deseja espalhar */
-    box-shadow: 0 0 100px 95px #ffffff1b; /* Espalha a cor com uma sombra */
+    background-color: rgba(255, 255, 255, 0.175);
+    /* Cor de fundo que você deseja espalhar */
+    box-shadow: 0 0 90px 100px rgba(255, 255, 255, 0.175)
+    /* Espalha a cor com uma sombra */
 }
 
 
 /*Detalhe do título da página*/
-strong{
+strong {
     color: rgb(255, 251, 98);
 }
 
 /*Card dos formulários*/
-.formulario{
-    background-color:rgb(255, 255, 255);
+.formulario {
+    background-color: rgb(255, 255, 255);
     color: rgb(82, 97, 255);
     font: var(--texto-geral);
     border-radius: 20px;
@@ -53,38 +55,37 @@ strong{
     margin: 20px auto;
     padding: 15px;
     box-shadow: 1px 1px 10px black;
-    
 }
 
 /*Alterando o tamnaho do radio bottons*/
-input[type=radio]{
+input[type=radio] {
     width: 25px;
     height: 25px;
-    vertical-align: middle;  
+    vertical-align: middle;
 }
 
 /*Areas que possuem os formulário*/
-.form-area{
+.form-area {
     margin-top: 30px;
 }
 
 /*Detalhes dos subtitulos h2*/
-h2{
+h2 {
     margin-top: 5px;
     text-align: center;
     font: var(--texto-subtitulo);
 }
 
 /*Input que recebe o nome do jogo*/
-#nome{
-    width:98%;
+#nome {
+    width: 98%;
     height: 30px;
     border: 1px solid rgb(134, 133, 133);
     border-radius: 5px;
 }
 
 /*Detalhes da descrição do game*/
-#descricao{
+#descricao {
     width: 98%;
     resize: none;
     height: 100px;
@@ -95,7 +96,7 @@ h2{
 }
 
 /*Botão para salvar o card*/
-#salvar{
+#salvar {
     background-color: rgb(65, 129, 255);
     width: 150px;
     color: rgb(255, 255, 255);
@@ -109,7 +110,7 @@ h2{
     margin: 40px auto 0 auto;
 }
 
-#salvar:hover{
+#salvar:hover {
     background-color: rgb(38, 95, 209);
     transition: .5s;
 }
@@ -117,7 +118,7 @@ h2{
 /*Estilo da lista sem estar marcado como favorito*/
 
 /*Container da lsita*/
-#lista{
+#lista {
     display: flex;
     padding: 0;
     overflow-y: scroll;
@@ -127,7 +128,7 @@ h2{
 }
 
 /*Itens da lista*/
-.item-jogo{
+.item-jogo {
     display: flex;
     padding: 3px;
     background-color: rgb(60, 78, 255);
@@ -136,12 +137,12 @@ h2{
     position: relative;
 }
 
-#saida-descricao{
+#saida-descricao {
     width: auto;
 }
 
 /*Pararafos filhos de uma div*/
-div > p{
+div>p {
     color: rgb(255, 255, 255);
     font: normal normal .74em sans-serif;
     margin-top: 5px;
@@ -149,46 +150,46 @@ div > p{
 }
 
 /*Primeira tag paragrafo da div (nesse caso, será o nome do jogo)*/
-div > p:first-of-type{
+div>p:first-of-type {
     font: normal bold 1.3em sans-serif;
     height: 28px;
     margin: 0 auto;
 }
 
 /*Div com as informações do jogo - nome e descrição*/
-#info-game{
+#info-game {
     margin-left: 55px;
 }
 
 /*Imagem do joystick*/
-#joy-image{
+#joy-image {
     width: 57px;
     height: 61px;
     position: absolute;
     transform: translateY(50%);
 }
 
-#container-icons{
+#container-icons {
     position: absolute;
     color: rgb(255, 255, 255);
     left: 80%;
-    
+
 }
 
 /*Detalhe no icon da estrela*/
-.star{
+.star {
     margin-left: 5px;
     cursor: pointer;
 }
 
-.trash{
+.trash {
     cursor: pointer;
 }
 
 /*Estilo da lista sem estar marcado como favorito*/
 
 /*Mudando background (ajustar apenar cor depois)*/
-li.item-jogo-fav{
+li.item-jogo-fav {
     display: flex;
     padding: 3px;
     background-color: rgb(20, 30, 126);
@@ -198,7 +199,7 @@ li.item-jogo-fav{
 }
 
 /*Mudando cor da estrela*/
-.star-fav{
+.star-fav {
     color: rgb(255, 255, 0);
 
 }
@@ -206,10 +207,22 @@ li.item-jogo-fav{
 
 /*AJUSTE NA RESPONSIVIDADE DA PÁGINA*/
 @media (max-width: 760px) {
-    body > div{
+    body>div {
         display: block;
     }
-    body{
-        font-size: 18pt;
+
+    /*Card dos formulários*/
+    .formulario {
+        width: 80%;
+        height: auto;
+        margin: 20px auto;
+        padding: 15px;
+        box-shadow: 1px 1px 10px black;
     }
+
+    h2 {
+        font: normal bold 2.3em sans-serif;
+    }
+
+
 }

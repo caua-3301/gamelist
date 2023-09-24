@@ -29,7 +29,7 @@ let elementoHTML = (id, nome, descricao, favorito) => {
                     <span class="material-symbols-outlined trash" onclick="removeJogo(${id})">
                         delete
                     </span>
-                    <span class="material-symbols-outlined star ${favorito ? 'star-fav' : 'star'}" onclick="setFavorito(${id})"  >
+                    <span class="material-symbols-outlined star ${favorito ? 'star-fav' : 'star'}" onclick="setFavorito(${id})">
                         star
                     </span>
                 </div>
@@ -46,8 +46,6 @@ function LoadList() {
     for (let game of banco) {
 
         let item = elementoHTML(game.id, game.nome, game.descricao, game.favorito);
-
-        console.log(typeof(game.nome))
 
         if (game.favorito) { //item lista
             lista.innerHTML = item + lista.innerHTML;
